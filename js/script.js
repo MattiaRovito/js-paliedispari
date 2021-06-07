@@ -46,6 +46,21 @@ if (numero < 1 || numero > 5)
 
 
 
-
-
 //TODO Palidroma Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma
+
+
+
+var parola = prompt('inserire una parola');
+
+var parolaInversa = invertiParola(parola);
+
+if(parola == parolaInversa){
+    console.log('la parola è palindroma');
+  } else {
+    console.log('la parola non è palindroma');
+  }
+  
+function invertiParola(x){
+  var xInversa = x.split('').reverse().join('');  
+  return xInversa;
+}
